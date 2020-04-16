@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+
+  tools {nodejs "nodejs"}
+
+  stages{
+
+    stage ('Cloning git'){
+      steps {
+        git 'https://github.com/symbyOZ/phase_of_moon.git'
+      }
+    }  
+  }
+}
