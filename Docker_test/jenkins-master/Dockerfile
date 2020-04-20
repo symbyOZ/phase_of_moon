@@ -13,8 +13,9 @@ RUN apt-get update && \
     stable" && \
     apt-get update && \
     apt-get -y install docker-ce
-RUN usermod -a -G docker jenkins \
-    chmod 664 /var/run/docker.sock \
-    systemctl restart jenkins.service \
+RUN sudo groupadd docker \
+    sudo usermod -a -G docker jenkins \
+    sudo chmod 664 /var/run/docker.sock \
+    sudo systemctl restart jenkins.service \
     sudo jenkins
 USER jenkins
