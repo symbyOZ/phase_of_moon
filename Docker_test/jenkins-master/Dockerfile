@@ -1,21 +1,20 @@
 FROM jenkins/jenkins:lts
 USER root
-RUN apt-get update && \
+RUN add-apt-repository main \
+    add-apt-repository universe  \
+    add-apt-repository restricted \
+    add-apt-repository multiverse \
+    apt-get update && \
     apt-get -y install apt-transport-https \
     ca-certificates \
     curl \
     gnupg2 \
-    software-properties-common && \
-    curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
-    add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
-    $(lsb_release -cs) \
-    stable" && \
     apt-get update && \
-    apt-get -y install docker-ce
-RUN sudo groupadd docker \
-    sudo usermod -a -G docker jenkins \
-    sudo -s jenkins \
-    sudo chmod 664 /var/run/docker.sock \
-    sudo systemctl restart jenkins.service
+    apt-get install docker-engine -y
+RUN groupadd docker \
+    usermod -a -G docker jenkins \
+    -s jenkins \
+    chmod 664 /var/run/docker.sock \
+    systemctl restart docker \
+    systemctl restart jenkins.service
 USER jenkins
