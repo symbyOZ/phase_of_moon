@@ -1,10 +1,6 @@
 FROM jenkins/jenkins:lts
 USER root
-RUN add-apt-repository main \
-    add-apt-repository universe  \
-    add-apt-repository restricted \
-    add-apt-repository multiverse \
-    apt-get update && \
+RUN apt-get update && \
     apt-get -y install apt-transport-https \
     ca-certificates \
     curl \

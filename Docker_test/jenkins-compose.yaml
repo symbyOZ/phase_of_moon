@@ -4,15 +4,11 @@ services:
 
   jenkins:
     image: jenkins/jenkins:lts
-    networks:
-      - jenkins
     ports:
       - '8080:8080'
-      - '9080:9080'
+      - '5000:5000'
     volumes:
       - 'jenkins_data:/var/jenkins_home'
-networks:
-  jenkins:
 volumes:
   jenkins_data:
     driver: local
