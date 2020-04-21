@@ -1,0 +1,8 @@
+#Подтягиваем образ Дженкинса
+docker pull jenkins/jenkins:lts
+#Запускаем контейнер в детач моде, с пробросом портов и сохранением данных в нужной директории
+docker run -d -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+#Подтягиваем сокет контейнер для шлюза между дженкинсом и докером
+docker pull alpine/socat
+#Запускаем сокет контенер
+docker run -d --restart=always     -p 127.0.0.1:2376:2375     -v /var/run/docker.sock:/var/run/docker.sock     alpine/socat     tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
