@@ -1,2 +1,0 @@
-chown -R 1000:1000 /jenkins/home
-docker run -p 8080:8080 -p 50000:50000 -v /jenkins/home:/var/jenkins_home jenkins/jenkins:lts
