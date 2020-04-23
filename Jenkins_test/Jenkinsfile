@@ -9,6 +9,6 @@ pipeline {
       steps {
         git 'https://github.com/symbyOZ/phase_of_moon.git'
       }
-    }  
+    }
   }
 }
