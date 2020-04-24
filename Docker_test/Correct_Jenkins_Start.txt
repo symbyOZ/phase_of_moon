@@ -1,7 +1,9 @@
+#пробрасываем папку для хранения файлов
+chown -R 1000:1000 /jenkins/home
 #Подтягиваем образ Дженкинса
 docker pull jenkins/jenkins:lts
 #Запускаем контейнер в детач моде, с пробросом портов и сохранением данных в нужной директории
-docker run -d -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+docker run -d --restart=always -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 #Подтягиваем сокет контейнер для шлюза между дженкинсом и докером
 docker pull alpine/socat
 #Запускаем сокет контенер
