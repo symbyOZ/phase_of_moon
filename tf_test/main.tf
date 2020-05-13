@@ -1,114 +1,91 @@
 provider "aws" {
-  version = "~> 2.0"
-  region  = "us-east-1"
-  access_key = "/home/user/Downloads/Test_AWS.pem"
-  secret_key = "/home/user/Downloads/Test_AWS.pem"
+  shared_credentials_file = "~/.aws/credentials"
+  profile = "default"
+  region  = "us-east-2"
 }
 
-resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
-  description = "Allow ssh inbound traffic"
+terraform {
 
+  backend "s3" {
+    bucket = "tf-phase-of-moon"
+    key = "tf-state/terraform.tfstate"
+    region = "us-east-2"
+}
+}
+
+data "template_file" "user_data" {
+  template = "${file("${path.module}/epic_script.sh")}"
+}
+
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
+#data "aws_availability_zones" "all" {}
+
+resource "aws_security_group" "tf-test" {
+  name        = "allow-ssh-tf-test"
   ingress {
     description = "ssh inbound"
     from_port   = 22
     to_port     = 22
-    protocol    = "ssh"
+    protocol    = "tcp"
     cidr_blocks = ["77.122.13.241/32"]
   }
-
+  ingress {
+    description = "http"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags = {
-    Name = "allow_ssh"
-  }
 }
 
-resource "aws_launch_template" "tf_test" {
-  name = "tf_test"
-
-  block_device_mappings {
-    device_name = "/dev/sda1"
-
-    ebs {
-      volume_size = 20
-    }
-  }
-
-  capacity_reservation_specification {
-    capacity_reservation_preference = "open"
-  }
-
-  cpu_options {
-    core_count       = 4
-    threads_per_core = 2
-  }
-
-  credit_specification {
-    cpu_credits = "standard"
-  }
-
-  disable_api_termination = true
-
-  ebs_optimized = true
-
-  #elastic_gpu_specifications {
-  #  type = "test"
-  #}
-
-  #elastic_inference_accelerator {
-  #  type = "eia1.medium"
-  #}
-
+resource "aws_launch_configuration" "tftest" {
+  name = "nginx"
   image_id = "ami-07c1207a9d40bc3bd"
-
-  instance_initiated_shutdown_behavior = "terminate"
-
-  security_group_names {
-    name="allow_ssh"
-  }
-  #instance_market_options {
-  #  market_type = "spot"
-  #}
-
+  key_name = "${var.key_name}"
+  security_groups = ["${aws_security_group.tf-test.id}"]
   instance_type = "t2.micro"
-
-  key_name = "Test_AWS"
-
-  license_specification {
-    license_configuration_arn = "arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef"
+  user_data = "${file("epic_script.sh")}"
   }
 
-  metadata_options {
-    http_endpoint               = "enabled"
-    http_tokens                 = "required"
-    http_put_response_hop_limit = 1
-  }
-
-  monitoring {
-    enabled = true
-  }
-
-  network_interfaces {
-    associate_public_ip_address = true
-  }
-
-  placement {
-    availability_zone = "us-west-2a"
-  }
-
-  tag_specifications {
-    resource_type = "instance"
-
-    tags = {
-      Name = "test_inst"
+resource "aws_autoscaling_group" "asg-test" {
+  launch_configuration = "${aws_launch_configuration.tftest.id}"
+  availability_zones = ["${data.aws_availability_zones.available.names[0]}"]
+  desired_capacity = 1
+  min_size = 1
+  max_size = 3
+  load_balancers = ["${aws_elb.test_elb.name}"]
+  health_check_type = "ELB"
+    tag {
+      key = "Name"
+      value = "asg-test"
+      propagate_at_launch = true
     }
-  }
+}
 
-  user_data = filebase64("${path.module}/epic_scri.sh")
+resource "aws_elb" "test_elb" {
+  name = "tfelbtest"
+  security_groups = ["${aws_security_group.tf-test.id}"]
+  availability_zones = ["${data.aws_availability_zones.available.names[0]}"]
+  health_check {
+    healthy_threshold = 2
+    unhealthy_threshold = 2
+    timeout = 3
+    interval = 30
+    target = "HTTP:80/"
+  }
+  listener {
+    lb_port = 80
+    lb_protocol = "http"
+    instance_port = 80
+    instance_protocol = "http"
+  }
 }
