@@ -1,0 +1,6 @@
+[postgres]
+name=postgres repo
+baseurl=http://apt.postgresql.org/pub/repos/apt/
+gpgcheck=0
+enabled=1
+priority=15

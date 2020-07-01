@@ -1,0 +1,444 @@
+2020-04-29 04:24:43,122 p=12991 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.15.215.191: unexpected output from Python interpreter discovery
+
+2020-04-29 04:24:43,122 p=12991 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.21.170.235: unexpected output from Python interpreter discovery
+
+2020-04-29 04:24:43,129 p=12991 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.16.158.104: unexpected output from Python interpreter discovery
+
+2020-04-29 04:24:44,429 p=12991 u=root |   [WARNING]: sftp transfer mechanism failed on [3.15.215.191]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:24:44,430 p=12991 u=root |   [WARNING]: sftp transfer mechanism failed on [3.21.170.235]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:24:44,444 p=12991 u=root |   [WARNING]: sftp transfer mechanism failed on [3.16.158.104]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:24:45,734 p=12991 u=root |   [WARNING]: scp transfer mechanism failed on [3.15.215.191]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:24:45,735 p=12991 u=root |   [WARNING]: scp transfer mechanism failed on [3.21.170.235]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:24:45,756 p=12991 u=root |   [WARNING]: scp transfer mechanism failed on [3.16.158.104]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:25:16,649 p=12991 u=root |   [WARNING]: Platform unknown on host 3.15.215.191 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information.
+
+2020-04-29 04:25:16,649 p=12991 u=root |  3.15.215.191 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "module_stderr": "Shared connection to 3.15.215.191 closed.\r\n",
+    "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 0
+}
+2020-04-29 04:25:16,650 p=12991 u=root |   [WARNING]: Platform unknown on host 3.21.170.235 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information.
+
+2020-04-29 04:25:16,650 p=12991 u=root |  3.21.170.235 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "module_stderr": "Shared connection to 3.21.170.235 closed.\r\n",
+    "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 0
+}
+2020-04-29 04:25:16,693 p=12991 u=root |   [WARNING]: Platform unknown on host 3.16.158.104 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information.
+
+2020-04-29 04:25:16,694 p=12991 u=root |  3.16.158.104 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "module_stderr": "Shared connection to 3.16.158.104 closed.\r\n",
+    "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 0
+}
+2020-04-29 04:26:10,793 p=13111 u=root |  3.16.158.104 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2020-04-29 04:26:10,989 p=13111 u=root |  3.21.170.235 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2020-04-29 04:26:11,059 p=13111 u=root |  3.15.215.191 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2020-04-29 04:26:27,210 p=13179 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 04:26:27,234 p=13179 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 04:27:00,457 p=13179 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.15.215.191: unexpected output from Python interpreter discovery
+
+2020-04-29 04:27:00,467 p=13179 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.16.158.104: unexpected output from Python interpreter discovery
+
+2020-04-29 04:27:00,469 p=13179 u=root |   [WARNING]: Unhandled error in Python interpreter discovery for host 3.21.170.235: unexpected output from Python interpreter discovery
+
+2020-04-29 04:27:01,766 p=13179 u=root |   [WARNING]: sftp transfer mechanism failed on [3.15.215.191]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:01,784 p=13179 u=root |   [WARNING]: sftp transfer mechanism failed on [3.16.158.104]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:01,788 p=13179 u=root |   [WARNING]: sftp transfer mechanism failed on [3.21.170.235]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:03,071 p=13179 u=root |   [WARNING]: scp transfer mechanism failed on [3.15.215.191]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:03,100 p=13179 u=root |   [WARNING]: scp transfer mechanism failed on [3.16.158.104]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:03,104 p=13179 u=root |   [WARNING]: scp transfer mechanism failed on [3.21.170.235]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2020-04-29 04:27:34,000 p=13179 u=root |  fatal: [3.15.215.191]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "failed": true, "module_stderr": "Shared connection to 3.15.215.191 closed.\r\n", "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 0, "warnings": ["Platform unknown on host 3.15.215.191 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information."]}}, "msg": "The following modules failed to execute: setup\n"}
+2020-04-29 04:27:34,047 p=13179 u=root |  fatal: [3.16.158.104]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "failed": true, "module_stderr": "Shared connection to 3.16.158.104 closed.\r\n", "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 0, "warnings": ["Platform unknown on host 3.16.158.104 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information."]}}, "msg": "The following modules failed to execute: setup\n"}
+2020-04-29 04:27:34,054 p=13179 u=root |  fatal: [3.21.170.235]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "failed": true, "module_stderr": "Shared connection to 3.21.170.235 closed.\r\n", "module_stdout": "Please login as the user \"ubuntu\" rather than the user \"root\".\r\n\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 0, "warnings": ["Platform unknown on host 3.21.170.235 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information."]}}, "msg": "The following modules failed to execute: setup\n"}
+2020-04-29 04:27:34,055 p=13179 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 04:27:34,056 p=13179 u=root |  3.15.215.191               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-04-29 04:27:34,056 p=13179 u=root |  3.16.158.104               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-04-29 04:27:34,056 p=13179 u=root |  3.21.170.235               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-04-29 04:29:50,750 p=13537 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 04:29:50,758 p=13537 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 04:29:58,229 p=13537 u=root |  ok: [3.21.170.235]
+2020-04-29 04:29:58,301 p=13537 u=root |  ok: [3.16.158.104]
+2020-04-29 04:29:58,546 p=13537 u=root |  ok: [3.15.215.191]
+2020-04-29 04:29:58,555 p=13537 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 04:30:07,144 p=13537 u=root |  changed: [3.16.158.104]
+2020-04-29 04:30:07,580 p=13537 u=root |  changed: [3.21.170.235]
+2020-04-29 04:30:09,564 p=13537 u=root |  changed: [3.15.215.191]
+2020-04-29 04:30:09,573 p=13537 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 04:30:58,622 p=13537 u=root |  changed: [3.16.158.104]
+2020-04-29 04:30:59,504 p=13537 u=root |  changed: [3.15.215.191]
+2020-04-29 04:30:59,538 p=13537 u=root |  changed: [3.21.170.235]
+2020-04-29 04:30:59,548 p=13537 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 04:31:03,282 p=13537 u=root |  ok: [3.16.158.104]
+2020-04-29 04:31:03,322 p=13537 u=root |  ok: [3.21.170.235]
+2020-04-29 04:31:03,461 p=13537 u=root |  ok: [3.15.215.191]
+2020-04-29 04:31:03,472 p=13537 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 04:31:03,489 p=13537 u=root |  skipping: [3.21.170.235]
+2020-04-29 04:31:03,505 p=13537 u=root |  skipping: [3.16.158.104]
+2020-04-29 04:31:03,546 p=13537 u=root |  skipping: [3.15.215.191]
+2020-04-29 04:31:03,548 p=13537 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 04:31:03,549 p=13537 u=root |  3.15.215.191               : ok=4    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 04:31:03,549 p=13537 u=root |  3.16.158.104               : ok=4    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 04:31:03,549 p=13537 u=root |  3.21.170.235               : ok=4    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 04:39:23,575 p=14491 u=root |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/git/phase_of_moon/ansible_test/my_playbooks/test_pb.yaml': line 27, column 14, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      -name: Install a list of packages
+        shell: 'sudo apt install apt-transport-https ca-certificates curl software-properties-common'
+             ^ here
+
+2020-04-29 16:38:18,833 p=16762 u=root |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/git/phase_of_moon/ansible_test/my_playbooks/test_pb.yaml': line 26, column 14, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      -name: Install a list of packages
+        shell: 'sudo apt install apt-transport-https ca-certificates curl software-properties-common'
+             ^ here
+
+2020-04-29 16:38:37,905 p=16778 u=root |  ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/git/phase_of_moon/ansible_test/my_playbooks/test_pb.yaml': line 26, column 14, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      -name: Install a list of packages
+        shell: sudo apt install apt-transport-https ca-certificates curl software-properties-common
+             ^ here
+
+2020-04-29 17:07:25,406 p=17724 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:07:25,413 p=17724 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:07:33,042 p=17724 u=root |  ok: [3.16.158.104]
+2020-04-29 17:07:33,251 p=17724 u=root |  ok: [3.21.170.235]
+2020-04-29 17:07:33,307 p=17724 u=root |  ok: [3.15.215.191]
+2020-04-29 17:07:33,318 p=17724 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:07:40,008 p=17724 u=root |  changed: [3.16.158.104]
+2020-04-29 17:07:40,664 p=17724 u=root |  changed: [3.15.215.191]
+2020-04-29 17:07:40,840 p=17724 u=root |  changed: [3.21.170.235]
+2020-04-29 17:07:40,850 p=17724 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:07:45,196 p=17724 u=root |  ok: [3.16.158.104]
+2020-04-29 17:07:45,348 p=17724 u=root |  ok: [3.21.170.235]
+2020-04-29 17:07:45,465 p=17724 u=root |  ok: [3.15.215.191]
+2020-04-29 17:07:45,475 p=17724 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:07:49,011 p=17724 u=root |  ok: [3.16.158.104]
+2020-04-29 17:07:49,068 p=17724 u=root |  ok: [3.21.170.235]
+2020-04-29 17:07:49,177 p=17724 u=root |  ok: [3.15.215.191]
+2020-04-29 17:07:49,188 p=17724 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:07:49,205 p=17724 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:07:49,221 p=17724 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:07:49,265 p=17724 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:07:49,267 p=17724 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:07:49,268 p=17724 u=root |  3.15.215.191               : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:07:49,268 p=17724 u=root |  3.16.158.104               : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:07:49,268 p=17724 u=root |  3.21.170.235               : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:16:04,135 p=18288 u=root |  ERROR! Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/git/phase_of_moon/ansible_test/my_playbooks/test_pb.yaml': line 25, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    -name: Install a list of packages
+    ^ here
+
+2020-04-29 17:16:36,372 p=18315 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:16:36,378 p=18315 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:16:43,911 p=18315 u=root |  ok: [3.15.215.191]
+2020-04-29 17:16:44,029 p=18315 u=root |  ok: [3.16.158.104]
+2020-04-29 17:16:44,083 p=18315 u=root |  ok: [3.21.170.235]
+2020-04-29 17:16:44,095 p=18315 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:16:48,039 p=18315 u=root |  ok: [3.15.215.191]
+2020-04-29 17:16:48,130 p=18315 u=root |  ok: [3.16.158.104]
+2020-04-29 17:16:48,202 p=18315 u=root |  ok: [3.21.170.235]
+2020-04-29 17:16:48,212 p=18315 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:16:52,449 p=18315 u=root |  ok: [3.15.215.191]
+2020-04-29 17:16:52,508 p=18315 u=root |  ok: [3.16.158.104]
+2020-04-29 17:16:52,582 p=18315 u=root |  ok: [3.21.170.235]
+2020-04-29 17:16:52,592 p=18315 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:16:56,175 p=18315 u=root |  ok: [3.15.215.191]
+2020-04-29 17:16:56,251 p=18315 u=root |  ok: [3.16.158.104]
+2020-04-29 17:16:56,302 p=18315 u=root |  ok: [3.21.170.235]
+2020-04-29 17:16:56,311 p=18315 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:16:56,326 p=18315 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:16:56,340 p=18315 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:16:56,382 p=18315 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:16:56,404 p=18315 u=root |  TASK [Install a list of packages] *********************************************************************************************************************************************************************************
+2020-04-29 17:23:26,539 p=18315 u=root |   [ERROR]: User interrupted execution
+
+2020-04-29 17:24:00,128 p=18797 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:24:00,136 p=18797 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:24:05,364 p=18797 u=root |  ok: [3.15.215.191]
+2020-04-29 17:24:05,467 p=18797 u=root |  ok: [3.16.158.104]
+2020-04-29 17:24:05,545 p=18797 u=root |  ok: [3.21.170.235]
+2020-04-29 17:24:05,557 p=18797 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:24:09,508 p=18797 u=root |  ok: [3.15.215.191]
+2020-04-29 17:24:09,591 p=18797 u=root |  ok: [3.16.158.104]
+2020-04-29 17:24:09,630 p=18797 u=root |  ok: [3.21.170.235]
+2020-04-29 17:24:09,639 p=18797 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:24:13,830 p=18797 u=root |  ok: [3.15.215.191]
+2020-04-29 17:24:13,930 p=18797 u=root |  ok: [3.16.158.104]
+2020-04-29 17:24:13,978 p=18797 u=root |  ok: [3.21.170.235]
+2020-04-29 17:24:13,988 p=18797 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:24:17,593 p=18797 u=root |  ok: [3.15.215.191]
+2020-04-29 17:24:17,673 p=18797 u=root |  ok: [3.16.158.104]
+2020-04-29 17:24:17,716 p=18797 u=root |  ok: [3.21.170.235]
+2020-04-29 17:24:17,727 p=18797 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:24:17,742 p=18797 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:24:17,757 p=18797 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:24:17,798 p=18797 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:24:17,812 p=18797 u=root |  TASK [Install a list of packages] *********************************************************************************************************************************************************************************
+2020-04-29 17:25:07,971 p=18797 u=root |   [ERROR]: User interrupted execution
+
+2020-04-29 17:26:00,758 p=19037 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:26:00,767 p=19037 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:26:05,852 p=19037 u=root |  ok: [3.15.215.191]
+2020-04-29 17:26:06,079 p=19037 u=root |  ok: [3.16.158.104]
+2020-04-29 17:26:06,146 p=19037 u=root |  ok: [3.21.170.235]
+2020-04-29 17:26:06,156 p=19037 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:26:10,196 p=19037 u=root |  ok: [3.16.158.104]
+2020-04-29 17:26:10,262 p=19037 u=root |  ok: [3.21.170.235]
+2020-04-29 17:26:10,262 p=19037 u=root |  ok: [3.15.215.191]
+2020-04-29 17:26:10,272 p=19037 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:26:14,487 p=19037 u=root |  ok: [3.15.215.191]
+2020-04-29 17:26:14,584 p=19037 u=root |  ok: [3.16.158.104]
+2020-04-29 17:26:14,627 p=19037 u=root |  ok: [3.21.170.235]
+2020-04-29 17:26:14,640 p=19037 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:26:18,247 p=19037 u=root |  ok: [3.15.215.191]
+2020-04-29 17:26:18,320 p=19037 u=root |  ok: [3.16.158.104]
+2020-04-29 17:26:18,365 p=19037 u=root |  ok: [3.21.170.235]
+2020-04-29 17:26:18,376 p=19037 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:26:18,394 p=19037 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:26:18,410 p=19037 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:26:18,456 p=19037 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:26:18,466 p=19037 u=root |  TASK [Install curl] ***********************************************************************************************************************************************************************************************
+2020-04-29 17:26:22,429 p=19037 u=root |   [WARNING]: Could not find aptitude. Using apt-get instead
+
+2020-04-29 17:26:22,430 p=19037 u=root |  ok: [3.15.215.191]
+2020-04-29 17:26:22,529 p=19037 u=root |  ok: [3.16.158.104]
+2020-04-29 17:26:22,567 p=19037 u=root |  ok: [3.21.170.235]
+2020-04-29 17:26:22,569 p=19037 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:26:22,570 p=19037 u=root |  3.15.215.191               : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:26:22,570 p=19037 u=root |  3.16.158.104               : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:26:22,570 p=19037 u=root |  3.21.170.235               : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:29:53,658 p=19385 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:29:53,665 p=19385 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:30:00,952 p=19385 u=root |  ok: [3.21.170.235]
+2020-04-29 17:30:00,975 p=19385 u=root |  ok: [3.16.158.104]
+2020-04-29 17:30:01,107 p=19385 u=root |  ok: [3.15.215.191]
+2020-04-29 17:30:01,117 p=19385 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:30:05,045 p=19385 u=root |  ok: [3.16.158.104]
+2020-04-29 17:30:05,081 p=19385 u=root |  ok: [3.21.170.235]
+2020-04-29 17:30:05,134 p=19385 u=root |  ok: [3.15.215.191]
+2020-04-29 17:30:05,142 p=19385 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:30:09,330 p=19385 u=root |  ok: [3.16.158.104]
+2020-04-29 17:30:09,385 p=19385 u=root |  ok: [3.21.170.235]
+2020-04-29 17:30:09,484 p=19385 u=root |  ok: [3.15.215.191]
+2020-04-29 17:30:09,493 p=19385 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:30:13,042 p=19385 u=root |  ok: [3.21.170.235]
+2020-04-29 17:30:13,057 p=19385 u=root |  ok: [3.16.158.104]
+2020-04-29 17:30:13,150 p=19385 u=root |  ok: [3.15.215.191]
+2020-04-29 17:30:13,159 p=19385 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:30:13,175 p=19385 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:30:13,195 p=19385 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:30:13,241 p=19385 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:30:13,249 p=19385 u=root |  TASK [Install curl] ***********************************************************************************************************************************************************************************************
+2020-04-29 17:30:17,185 p=19385 u=root |   [WARNING]: Could not find aptitude. Using apt-get instead
+
+2020-04-29 17:30:17,185 p=19385 u=root |  ok: [3.21.170.235]
+2020-04-29 17:30:17,203 p=19385 u=root |  ok: [3.16.158.104]
+2020-04-29 17:30:17,296 p=19385 u=root |  ok: [3.15.215.191]
+2020-04-29 17:30:17,306 p=19385 u=root |  TASK [Download docker] ********************************************************************************************************************************************************************************************
+2020-04-29 17:30:25,239 p=19385 u=root |   [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-04-29 17:30:25,240 p=19385 u=root |  changed: [3.15.215.191]
+2020-04-29 17:30:25,380 p=19385 u=root |  changed: [3.16.158.104]
+2020-04-29 17:30:25,589 p=19385 u=root |  changed: [3.21.170.235]
+2020-04-29 17:30:25,591 p=19385 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:30:25,591 p=19385 u=root |  3.15.215.191               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:30:25,591 p=19385 u=root |  3.16.158.104               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:30:25,591 p=19385 u=root |  3.21.170.235               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:30:58,729 p=19634 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:30:58,737 p=19634 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:31:03,899 p=19634 u=root |  ok: [3.21.170.235]
+2020-04-29 17:31:03,907 p=19634 u=root |  ok: [3.16.158.104]
+2020-04-29 17:31:04,050 p=19634 u=root |  ok: [3.15.215.191]
+2020-04-29 17:31:04,063 p=19634 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:31:07,985 p=19634 u=root |  ok: [3.16.158.104]
+2020-04-29 17:31:07,998 p=19634 u=root |  ok: [3.21.170.235]
+2020-04-29 17:31:08,105 p=19634 u=root |  ok: [3.15.215.191]
+2020-04-29 17:31:08,113 p=19634 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:31:12,305 p=19634 u=root |  ok: [3.21.170.235]
+2020-04-29 17:31:12,318 p=19634 u=root |  ok: [3.16.158.104]
+2020-04-29 17:31:12,439 p=19634 u=root |  ok: [3.15.215.191]
+2020-04-29 17:31:12,447 p=19634 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:31:15,988 p=19634 u=root |  ok: [3.21.170.235]
+2020-04-29 17:31:16,003 p=19634 u=root |  ok: [3.16.158.104]
+2020-04-29 17:31:16,098 p=19634 u=root |  ok: [3.15.215.191]
+2020-04-29 17:31:16,108 p=19634 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:31:16,123 p=19634 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:31:16,142 p=19634 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:31:16,183 p=19634 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:31:16,197 p=19634 u=root |  TASK [Install curl] ***********************************************************************************************************************************************************************************************
+2020-04-29 17:31:20,108 p=19634 u=root |   [WARNING]: Could not find aptitude. Using apt-get instead
+
+2020-04-29 17:31:20,108 p=19634 u=root |  ok: [3.21.170.235]
+2020-04-29 17:31:20,129 p=19634 u=root |  ok: [3.16.158.104]
+2020-04-29 17:31:20,256 p=19634 u=root |  ok: [3.15.215.191]
+2020-04-29 17:31:20,266 p=19634 u=root |  TASK [Download docker] ********************************************************************************************************************************************************************************************
+2020-04-29 17:31:27,771 p=19634 u=root |   [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-04-29 17:31:27,772 p=19634 u=root |  changed: [3.16.158.104]
+2020-04-29 17:31:27,862 p=19634 u=root |  changed: [3.15.215.191]
+2020-04-29 17:31:28,107 p=19634 u=root |  changed: [3.21.170.235]
+2020-04-29 17:31:28,109 p=19634 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:31:28,110 p=19634 u=root |  3.15.215.191               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:31:28,110 p=19634 u=root |  3.16.158.104               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:31:28,110 p=19634 u=root |  3.21.170.235               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:34:01,310 p=19933 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:34:01,319 p=19933 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:34:08,832 p=19933 u=root |  ok: [3.15.215.191]
+2020-04-29 17:34:08,834 p=19933 u=root |  ok: [3.16.158.104]
+2020-04-29 17:34:08,840 p=19933 u=root |  ok: [3.21.170.235]
+2020-04-29 17:34:08,851 p=19933 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:34:12,894 p=19933 u=root |  ok: [3.15.215.191]
+2020-04-29 17:34:12,926 p=19933 u=root |  ok: [3.16.158.104]
+2020-04-29 17:34:12,934 p=19933 u=root |  ok: [3.21.170.235]
+2020-04-29 17:34:12,943 p=19933 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:34:17,258 p=19933 u=root |  ok: [3.15.215.191]
+2020-04-29 17:34:17,264 p=19933 u=root |  ok: [3.21.170.235]
+2020-04-29 17:34:17,277 p=19933 u=root |  ok: [3.16.158.104]
+2020-04-29 17:34:17,286 p=19933 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:34:20,963 p=19933 u=root |  ok: [3.15.215.191]
+2020-04-29 17:34:20,966 p=19933 u=root |  ok: [3.21.170.235]
+2020-04-29 17:34:20,968 p=19933 u=root |  ok: [3.16.158.104]
+2020-04-29 17:34:20,978 p=19933 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:34:20,997 p=19933 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:34:21,013 p=19933 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:34:21,059 p=19933 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:34:21,069 p=19933 u=root |  TASK [Install curl] ***********************************************************************************************************************************************************************************************
+2020-04-29 17:34:25,133 p=19933 u=root |   [WARNING]: Could not find aptitude. Using apt-get instead
+
+2020-04-29 17:34:25,134 p=19933 u=root |  ok: [3.15.215.191]
+2020-04-29 17:34:25,134 p=19933 u=root |  ok: [3.16.158.104]
+2020-04-29 17:34:25,140 p=19933 u=root |  ok: [3.21.170.235]
+2020-04-29 17:34:25,151 p=19933 u=root |  TASK [Install docker] *********************************************************************************************************************************************************************************************
+2020-04-29 17:34:48,725 p=19933 u=root |  changed: [3.16.158.104]
+2020-04-29 17:34:49,202 p=19933 u=root |  changed: [3.15.215.191]
+2020-04-29 17:34:49,850 p=19933 u=root |  changed: [3.21.170.235]
+2020-04-29 17:34:49,852 p=19933 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:34:49,853 p=19933 u=root |  3.15.215.191               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:34:49,853 p=19933 u=root |  3.16.158.104               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:34:49,853 p=19933 u=root |  3.21.170.235               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:37:20,961 p=20237 u=root |  ERROR! Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/git/phase_of_moon/ansible_test/my_playbooks/test_pb.yaml': line 35, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+     - name: Check Docker status
+     ^ here
+
+2020-04-29 17:37:35,358 p=20247 u=root |  PLAY [test_all] ***************************************************************************************************************************************************************************************************
+2020-04-29 17:37:35,365 p=20247 u=root |  TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2020-04-29 17:37:43,145 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:37:43,278 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:37:43,320 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:37:43,330 p=20247 u=root |  TASK [Update apt repo and cache on all Debian/Ubuntu boxes] *******************************************************************************************************************************************************
+2020-04-29 17:37:47,297 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:37:47,417 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:37:47,419 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:37:47,434 p=20247 u=root |  TASK [Upgrade all packages on servers] ****************************************************************************************************************************************************************************
+2020-04-29 17:37:51,625 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:37:51,765 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:37:51,807 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:37:51,816 p=20247 u=root |  TASK [Check if a reboot is needed on all servers] *****************************************************************************************************************************************************************
+2020-04-29 17:37:55,438 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:37:55,531 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:37:55,554 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:37:55,564 p=20247 u=root |  TASK [Reboot the box if kernel updated] ***************************************************************************************************************************************************************************
+2020-04-29 17:37:55,579 p=20247 u=root |  skipping: [3.21.170.235]
+2020-04-29 17:37:55,599 p=20247 u=root |  skipping: [3.16.158.104]
+2020-04-29 17:37:55,644 p=20247 u=root |  skipping: [3.15.215.191]
+2020-04-29 17:37:55,653 p=20247 u=root |  TASK [Install curl] ***********************************************************************************************************************************************************************************************
+2020-04-29 17:37:59,598 p=20247 u=root |   [WARNING]: Could not find aptitude. Using apt-get instead
+
+2020-04-29 17:37:59,598 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:37:59,716 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:37:59,735 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:37:59,745 p=20247 u=root |  TASK [Install docker] *********************************************************************************************************************************************************************************************
+2020-04-29 17:38:03,860 p=20247 u=root |  ok: [3.15.215.191]
+2020-04-29 17:38:03,931 p=20247 u=root |  ok: [3.16.158.104]
+2020-04-29 17:38:03,968 p=20247 u=root |  ok: [3.21.170.235]
+2020-04-29 17:38:03,987 p=20247 u=root |  TASK [Check Docker status] ****************************************************************************************************************************************************************************************
+2020-04-29 17:38:08,936 p=20247 u=root |  changed: [3.16.158.104]
+2020-04-29 17:38:09,172 p=20247 u=root |  changed: [3.21.170.235]
+2020-04-29 17:38:09,190 p=20247 u=root |  changed: [3.15.215.191]
+2020-04-29 17:38:09,193 p=20247 u=root |  PLAY RECAP ********************************************************************************************************************************************************************************************************
+2020-04-29 17:38:09,193 p=20247 u=root |  3.15.215.191               : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:38:09,193 p=20247 u=root |  3.16.158.104               : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-04-29 17:38:09,193 p=20247 u=root |  3.21.170.235               : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
